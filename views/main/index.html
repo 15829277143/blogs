@@ -1,0 +1,42 @@
+{% extends 'layout.html'%} {% block content%}
+<div class="col-lg-6">
+	{% for content in content%}
+	<div class="panel panel-default">
+		<div class="panel-heading">{{content.category.name}}</div>
+		<div class="panel-body">
+			<h3>{{content.title}}</h3>
+			<p class="p1">
+				<span>作者:<span>{{content.user.username}}</span></span>
+				<span>时间:<span>{{content.addTime|date('Y年m月d日 H:i:s',-8*60)}}</span></span>
+				<span>阅读：<span>{{content.views}}</span></span>
+				<span>评论:<span>{{content.comments.length}}</span></span>
+			</p>
+			<button class="btn btn-success"><a href="/view?contentId={{content.id}}">查看全文</a></button>
+		</div>
+	</div>
+	{% endfor %}
+
+	<ul id="footer">
+		<li class="previous">
+			{% if page
+			<=1 %} <span>没有上一页了</span>
+				{% else%}
+				<a href="/?category={{category}}&page={{page-1}}" class=".prev">上一页</a>
+				{% endif%}
+		</li>
+
+		{% if pages > 0 %}
+		<li class="previous">
+			<strong>{{page}}/{{pages}}</strong>
+		</li>
+		{% endif%}
+		<li class="next">
+			{% if page>=pages %}
+			<span>没有下一页了</span> {% else%}
+			<a href="/?category={{category}}&page={{page+1}}" class="next">下一页</a>
+			{% endif%}
+		</li>
+	</ul>
+</div>
+
+{% endblock%}

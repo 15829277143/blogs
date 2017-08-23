@@ -1,0 +1,59 @@
+{% extends 'layout.html'%} {% block content%}
+<div class="col-lg-6">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h3>{{content.title}}</h3>
+			<p class="p1">
+				<span>作者:<span>{{content.user.username}}</span></span>
+				<span>时间:<span>{{content.addTime|date('Y年m月d日 H:i:s',-8*60)}}</span></span>
+				<span>阅读：<span>{{content.views}}</span></span>
+				<span>评论:<span>{{content.comments.length}}</span></span>
+			</p>
+			<p>{{content.content}}</p>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">评论<span id="span">一共有0条评论</span></div>
+		<div class="panel-body">
+			{% if userInfo._id %}
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="请输入评论" id="inp">
+				<input type="hidden" id="hidden1" value="{{content.id}}" />
+				<span class="input-group-btn">
+        			<button class="btn btn-default" type="button" id="btn1">提交!</button>
+      			</span>
+			</div>
+			{% else%}
+			<div class="login">
+				<a href="">你还没有登陆，请先登陆</a>
+			</div>
+			{% endif%}
+			
+			<div id="list">
+				<!--<hr />
+					<span>admin</span>
+					<span>2017-08-22</span>
+					<h5>hahahaahahh</h5>
+					<hr />
+					<span>admin</span>
+					<span>2017-08-22</span>
+					<h5>hahahaahahh</h5>-->
+			</div>
+			<nav class="pager">
+				<ul class="clearfix">
+					<li class="previous">
+						
+					</li>
+					<li></li>
+					<li class="next">
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock%}

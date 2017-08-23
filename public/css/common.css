@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+p.ie6block{display:none;}
+/*360字体改变*/
+html{-webkit-text-size-adjust: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing:border-box;overflow-x:hidden;}
+.fontshrink5{-webkit-text-size-adjust:none;-webkit-transform:scale(0.5);-o-transform:scale(1); 
+display:inline-block; }
+.fontshrink6{-webkit-text-size-adjust:none;-webkit-transform:scale(0.6);-o-transform:scale(1); 
+display:inline-block; }
+.fontshrink7{-webkit-text-size-adjust:none;-webkit-transform:scale(0.7);-o-transform:scale(1); 
+display:inline-block; }
+.fontshrink8{-webkit-text-size-adjust:none;-webkit-transform:scale(0.8);-o-transform:scale(1); 
+display:inline-block; }
+
+*{list-style-type:none;box-sizing:border-box;-moz-box-sizing:border-box;}
+.bscbox{box-sizing:content-box;}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,input{margin:0;padding:0;}
+body{font-size:12px;font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";line-height:120%;
+color:#000;background:#fff;margin:0;}
+a,img,fieldset{border:none;}
+img{vertical-align:middle;border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal} 
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;margin:0;padding:0;}
+p{margin:0;padding:0;} 
+td{padding: 3px;}
+ul,ol,li{list-style:none;margin:0;padding:0;}
+i, cite, em{font-style:normal;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input{padding: 1px;vertical-align: middle;line-height: normal;}
+label{cursor:pointer;}
+a{text-decoration:none; color:#000000;border:0;}
+a:link{text-decoration:none; }
+a:hover{text-decoration:none; }
+a:visited{text-decoration:none; }
+a:active{text-decoration:none; }
+.clear{height:0;overflow:hidden;clear:both;font-size: 0; line-height:0;}
+.clearfix:before,.clearfix:after{display:table;content:"";}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1} 
